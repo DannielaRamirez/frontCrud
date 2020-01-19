@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: angular-service
+  labels:
+     app: ngnex-app
+spec:
+  type: NodePort 
+  selector:
+    app: ngnex-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 31000
+      
+    
